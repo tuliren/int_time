@@ -40,10 +40,6 @@ class IntTime
     format('%02d:%02d', @hour, @minute)
   end
 
-  def inspect
-    "IntTime #{self}"
-  end
-
 
   #######################
   ##   Class Methods   ##
