@@ -27,7 +27,7 @@ class IntTimeTest < Minitest::Test
   end
 
   def test_to_readable
-    assert_equal "12:34", IntTime.to_readable(concat_number(12, 34))
+    assert_equal "12:34", IntTime.to_str(concat_number(12, 34))
   end
 
   def test_valid_hour?

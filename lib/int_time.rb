@@ -10,6 +10,11 @@ class IntTime
     @minute = minute
   end
 
+
+  ##########################
+  ##   Instance Methods   ##
+  ##########################
+
   def +(other)
     new_minute = @minute + other.minute
     new_hour = @hour + other.hour + new_minute / MAX_MINUTE
@@ -39,6 +44,11 @@ class IntTime
     "IntTime #{self}"
   end
 
+
+  #######################
+  ##   Class Methods   ##
+  #######################
+
   def self.valid?(number)
     number.is_a?(Integer) &&
       number >= 0 &&
@@ -60,6 +70,7 @@ class IntTime
     raise "Input #{time} is not a valid int time" unless valid?(time)
     IntTime.new(time % 10_000 / 100 % MAX_HOUR, time % 100 % MAX_MINUTE)
   end
+  private_class_method :from_int
 
   def self.from_str(time)
     match = TIME_PATTERN.match(time)
@@ -68,9 +79,14 @@ class IntTime
     end
     IntTime.new(match[1].to_i, match[2].to_i)
   end
+  private_class_method :from_str
 
-  def self.to_readable(number)
-    from(number).to_s
+  def self.to_str(time)
+    from(time).to_s
+  end
+
+  def self.to_int(time)
+    from(time).to_i
   end
 
   def self.valid_hour?(number)
