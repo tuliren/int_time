@@ -20,6 +20,10 @@ class IntTimeTest < Minitest::Test
     int_time = IntTime.from(concat_number(hour, minute))
     assert_equal hour, int_time.hour
     assert_equal minute, int_time.minute
+
+    str_time = IntTime.from(format('%02d:%02d', hour, minute))
+    assert_equal hour, str_time.hour
+    assert_equal minute, str_time.minute
   end
 
   def test_to_readable
