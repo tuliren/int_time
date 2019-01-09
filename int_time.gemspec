@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'int_time'
-  s.version     = '0.0.1'
+  s.version     = '0.0.2'
   s.date        = '2018-12-26'
   s.summary     = 'Integer Time Class'
   s.description = 'A value class for time'
