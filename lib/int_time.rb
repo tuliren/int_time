@@ -57,6 +57,8 @@ class IntTime
       from_int(token)
     elsif token.class <= String
       from_str(token)
+    elsif token.class <= Time
+      from_time(token)
     else
       raise "Invalid input: #{token}; expect integer or string"
     end
@@ -76,6 +78,11 @@ class IntTime
     IntTime.new(match[1].to_i, match[2].to_i)
   end
   private_class_method :from_str
+
+  def self.from_time(time)
+    IntTime.new(time.hour, time.min)
+  end
+  private_class_method :from_time
 
   def self.to_str(time)
     from(time).to_s
