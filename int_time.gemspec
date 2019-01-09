@@ -7,6 +7,6 @@ Gem::Specification.new do |s|
   s.authors     = ['Liren Tu']
   s.email       = 'tuliren@gmail.com'
   s.files       = ["lib/int_time.rb"]
-  s.homepage    = 'https://rubygems.org/gems/int_time'
+  s.homepage    = 'https://github.com/tuliren/int_time'
   s.license     = 'MIT'
 end
