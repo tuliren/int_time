@@ -60,7 +60,7 @@ class IntTime
     elsif token.class <= Time
       from_time(token)
     else
-      raise "Invalid input: #{token}; expect integer or string"
+      raise "Invalid input: #{token}; expect Integer, String, or Time"
     end
   end
 
