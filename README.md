@@ -1,7 +1,7 @@
 Int Time
 ====
 
-[![Build Status](https://travis-ci.org/tuliren/int_time.svg?branch=master)](https://travis-ci.org/tuliren/int_time)
+[![Build Status](https://github.com/tuliren/int_time/workflows/build/badge.svg)](https://github.com/tuliren/int_time/actions)
 [![Gem Version](https://badge.fury.io/rb/int_time.svg)](https://badge.fury.io/rb/int_time)
 
 ## Overview
